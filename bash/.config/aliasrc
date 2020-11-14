@@ -1,0 +1,25 @@
+#!/bin/sh
+#
+# Verbosity and settings
+alias \ 
+	cp="cp -iv" \
+	mv="mv -iv" \
+	rm="rm -v" \
+	mkd="mkdir -pv" \
+	yt="youtube-dl --add-metadata -i" \
+	yta="yt -x -f bestaudio" 
+
+# Colorize commands when possible
+alias \
+	ls="ls -lhN --color=auto --group-directories-first" \
+	la="ls -lahN --color=auto --group-directories-first" 
+
+# Abbreviated commands
+alias \
+	sv="straw-viewer" \
+	sdn="sudo shutdown -h now" \
+	bit="surf http://192.168.1.167:30000" \
+	feh="feh -F" \
+	grep="grep --color=auto" \
+	esdict="dict -d spa-eng" \
+	searchook="unzip SearchOok* && rm *.zip" 
