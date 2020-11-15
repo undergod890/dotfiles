@@ -57,7 +57,7 @@ exec --no-startup-id pulseaudio
 
 # Start Applications
 bindsym $mod+Ctrl+b exec terminal -e 'bmenu'
-bindsym $mod+F2 exec firefox
+bindsym $mod+F2 exec palemoon
 bindsym $mod+F3 exec pcmanfm
 #bindsym $mod+F3 exec ranger
 bindsym $mod+Shift+F3 exec pcmanfm_pkexec
@@ -296,7 +296,7 @@ exec_always --no-startup-id fix_xcursor
 #exec --no-startup-id polybar.sh
 exec_always --no-startup-id unclutter
 exec --no-startup-id mount.sh
-
+exec_always --no-startup-id  xrandr --output LVDS1 --mode 1366x768
 
 # Color palette used for the terminal ( ~/.Xresources file )
 # Colors are gathered based on the documentation:
