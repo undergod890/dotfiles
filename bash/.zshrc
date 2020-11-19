@@ -201,4 +201,4 @@ esac
 EDITOR=vim
 
 # Neofetch
-neofetch
+neofetch | lolcat
