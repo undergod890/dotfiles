@@ -22,4 +22,6 @@ alias \
 	feh="feh -F" \
 	grep="grep --color=auto" \
 	esdict="dict -d spa-eng" \
-	searchook="unzip SearchOok* && rm *.zip" 
+	searchook="unzip SearchOok* && rm *.zip" \
+	n="nnn -e" \
+	r="ranger"
