@@ -7,6 +7,8 @@ set smartcase
 set incsearch
 set ignorecase
 
+set tabstop=2
+set expandtab
 set autoindent
 set smartindent
 set smarttab
