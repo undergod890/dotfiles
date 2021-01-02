@@ -24,4 +24,5 @@ alias \
 	esdict="dict -d spa-eng" \
 	searchook="unzip SearchOok* && rm *.zip" \
 	n="nnn -e" \
-	r="ranger"
+	r="ranger" \
+  z="zathura"
