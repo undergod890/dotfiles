@@ -25,4 +25,5 @@ alias \
 	searchook="unzip SearchOok* && rm *.zip" \
 	n="nnn -e" \
 	r="ranger" \
-  z="zathura"
+  z="zathura" \
+  rsync="rsync -avzh"
