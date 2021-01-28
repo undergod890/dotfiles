@@ -298,6 +298,8 @@ exec_always --no-startup-id fix_xcursor
 exec_always --no-startup-id unclutter
 exec --no-startup-id mount.sh
 exec_always --no-startup-id  xrandr --output LVDS1 --mode 1366x768
+exec --no-startup-id owncloud
+exec --no-startup-id stardict
 
 # Color palette used for the terminal ( ~/.Xresources file )
 # Colors are gathered based on the documentation:
@@ -430,9 +432,9 @@ mode "$mode_gaps_outer" {
 }
 
 # Change keyboard layout
-#bindsym $mod+Ctrl+k exec /home/landsome/.config/i3-keyboard-layout cycle us es 
-bindsym $mod+Ctrl+z exec setxkbmap us
-bindsym $mod+Ctrl+x exec setxkbmap es
+bindsym $mod+Escape exec toggle-keyboard
+#bindsym $mod+Ctrl+z exec setxkbmap us
+#bindsym $mod+Ctrl+x exec setxkbmap es
 
 # Spotif Shortcuts
 bindsym XF86AudioPlay exec playerctl play-pause
