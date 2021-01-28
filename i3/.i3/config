@@ -300,6 +300,7 @@ exec --no-startup-id mount.sh
 exec_always --no-startup-id  xrandr --output LVDS1 --mode 1366x768
 exec --no-startup-id owncloud
 exec --no-startup-id stardict
+exec --no-startup-id syncthing --no-browser
 
 # Color palette used for the terminal ( ~/.Xresources file )
 # Colors are gathered based on the documentation:
