@@ -28,14 +28,13 @@ ask() {
 }
 
 if ask "Install missing directories for Stow?" Y; then
-	echo "Installing mpv directory"
-	mkdir -p ~/.config/mpv
+	echo "Installing directories"
+	mkdir -pv ~/.config/mpv ~/.config/ranger/ ~/.newsboat/ ~/.config/neofetch/
 	fi
 
 for file in $(ls); do
   if [ -d $file ]; then
     if ask "Install configuration files $file?" Y; then
-      mkdir -p .config/mpv
       stow $file -t $HOME -v
     fi
   fi
