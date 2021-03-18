@@ -27,8 +27,8 @@ ask() {
   done
 }
 
-if ask "Install missing directories for Stow?" Y; then
-	echo "Installing directories"
+if ask "Create potentially missing directories for Stow?" Y; then
+	echo "Creating directories"
 	mkdir -pv ~/.config/mpv ~/.config/ranger/ ~/.newsboat/ ~/.config/neofetch/
 	fi
 
