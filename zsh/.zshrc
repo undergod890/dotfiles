@@ -25,7 +25,7 @@ SAVEHIST=500
 WORDCHARS=${WORDCHARS//\/[&.;]}                                 # Don't consider certain characters part of the word
 
 ## Load aliases and shortcuts if existent.
-[ -f "${XDG_CONFIG_HOME:-$HOME/.config}/aliasrc" ] && source "${XDG_CONFIG_HOME:-$HOME/.config}/aliasrc"
+#[ -f "${XDG_CONFIG_HOME:-$HOME/.config}/aliasrc" ] && source "${XDG_CONFIG_HOME:-$HOME/.config}/aliasrc"
 
 ## Keybindings section
 bindkey -e
@@ -198,7 +198,40 @@ case $(basename "$(cat "/proc/$PPID/comm")") in
 esac
 
 # Set editor
-EDITOR=vim
+EDITOR=nvim
 
 # Neofetch
 neofetch | lolcat
+
+# Ranger
+export VISUAL=nvim
+export PAGER=more
+
+if [ -n "$RANGER_LEVEL" ]; then export PS1="[ranger]$PS1"; fi
+
+
+## Alias
+# Verbosity and settings
+	alias cp="cp -iv" 
+	alias mv="mv -iv" 
+	alias rm="rm -v" 
+	alias mkd="mkdir -pv" 
+	alias yt="youtube-dl --add-metadata -i" 
+	alias yta="yt -x -f bestaudio" 
+
+# Colorize commands when possible
+	alias ls="ls -lhN --color=auto --group-directories-first" 
+	alias la="ls -lahN --color=auto --group-directories-first" 
+
+# Abbreviated commands
+	alias sdn="sudo shutdown -h now" 
+	alias bit="surf http://192.168.1.167:30000" 
+	alias feh="feh -F" 
+	alias grep="grep --color=auto" 
+	alias esdict="dict -d spa-eng" 
+	alias searchook="unzip SearchOok* && rm *.zip" 
+	alias n="nnn -e" 
+	alias r="ranger" 
+    alias z="zathura" 
+    alias rsync="rsync -avzh" 
+    alias vim="nvim"
