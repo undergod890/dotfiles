@@ -59,9 +59,9 @@ exec --no-startup-id pulseaudio
 bindsym $mod+Ctrl+b exec terminal -e 'bmenu'
 bindsym $mod+F1 exec "qbittorrent"
 bindsym $mod+F2 exec firefox
-bindsym $mod+F3 exec pcmanfm
-#bindsym $mod+F3 exec ranger
-bindsym $mod+Shift+F3 exec pcmanfm_pkexec
+#bindsym $mod+F3 exec pcmanfm
+bindsym $mod+F3 exec st -e ranger
+#bindsym $mod+Shift+F3 exec pcmanfm_pkexec
 bindsym $mod+F5 exec terminal -e 'mocp'
 bindsym $mod+t exec --no-startup-id pkill compton
 bindsym $mod+Ctrl+t exec --no-startup-id compton -b
@@ -296,7 +296,7 @@ exec_always --no-startup-id fix_xcursor
 #exec --no-startup-id polybar.sh
 exec_always --no-startup-id unclutter
 exec_always --no-startup-id  xrandr --output LVDS1 --mode 1366x768
-exec --no-startup-id stardict
+exec --no-startup-id stardict -h
 exec --no-startup-id syncthing --no-browser
 exec --no-startup-id owncloud
 exec --no-startup-id nextcloud
