@@ -1,3 +1,10 @@
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block; everything else may go below.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
@@ -42,7 +49,7 @@ ZSH_THEME="robbyrussell"
 # DISABLE_AUTO_TITLE="true"
 
 # Uncomment the following line to enable command auto-correction.
-# ENABLE_CORRECTION="true"
+ENABLE_CORRECTION="true"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
 # Caution: this setting can cause issues with multiline prompts (zsh 5.7.1 and newer seem to work)
@@ -70,7 +77,7 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(git zsh-autosuggestions zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -99,3 +106,35 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+#
+#
+## Alias
+# Verbosity and settings
+        alias cp="cp -iv"
+        alias mv="mv -iv"
+        alias rm="rm -v"
+        alias mkd="mkdir -pv"
+        alias yt="youtube-dl --add-metadata -i"
+        alias yta="yt -x -f bestaudio"
+
+# Colorize commands when possible
+        alias ls="ls -lhN --color=auto --group-directories-first"
+        alias la="ls -lahN --color=auto --group-directories-first"
+
+# Abbreviated commands
+        alias sdn="sudo shutdown -h now"
+        alias bit="surf http://192.168.1.167:30000"
+        alias feh="feh -F"
+        alias grep="grep --color=auto"
+        alias esdict="dict -d spa-eng"
+        alias searchook="unzip SearchOok* && rm *.zip"
+        alias n="nnn -e"
+        alias r="ranger"
+        alias z="zathura"
+        alias rsync="rsync -avzh"
+        alias vim="nvim"
+
+source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
+
+# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
