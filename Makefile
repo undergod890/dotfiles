@@ -12,6 +12,7 @@ uninstall:
 	stow -v -t $(HOME) -D neovim
 	stow -v -t $(HOME) -D newsboat
 	stow -v -t $(HOME) -D ranger
+	stow -v -t $(HOME) -D rofi
 	stow -v -t $(HOME) -D thunar
 	stow -v -t $(HOME) -D vim
 	stow -v -t $(HOME) -D X11
