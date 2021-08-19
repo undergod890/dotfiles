@@ -140,10 +140,12 @@ export PATH=$HOME/.config/rofi/bin:$PATH
         alias z="zathura"
         alias rsync="rsync -avzh"
         alias vim="nvim"
+        alias mirrorUpdate='sudo pacman-mirrors --fasttrack && sudo pacman -Syyu'
+
 
 source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
-neofetch | lolcat
+neofetch
