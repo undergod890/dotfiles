@@ -141,7 +141,7 @@ export PATH=$HOME/.config/rofi/bin:$PATH
         alias rsync="rsync -avzh"
         alias vim="nvim"
         alias mirrorUpdate='sudo pacman-mirrors --fasttrack && sudo pacman -Syyu'
-
+        alias stow='stow -v -t $HOME'
 
 source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
 
